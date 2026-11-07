@@ -1,0 +1,240 @@
+
+/* ==========================================================================
+   1. RESET E PADRÕES DO SITE
+   ========================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #000000, #121212);
+    min-height: 100vh; 
+    color: #ffffff;
+    font-family: 'Satoshi', sans-serif; 
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO OFICIAL PREMIUM COM ÍCONES E BLUR
+   ========================================================================= */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.bloco-logo-redes {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+    letter-spacing: -0.5px;
+}
+
+.icones-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    border-left: 1px solid rgba(255, 255, 255, 0.15); 
+    padding-left: 15px;
+}
+
+.link-icone-topo {
+    color: rgba(255, 255, 255, 0.6); 
+    font-size: 16px; 
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.link-icone-topo:hover {
+    transform: translateY(-1px);
+}
+
+.link-icone-topo.topo-whats:hover { color: #25d366; }
+.link-icone-topo.topo-insta:hover { color: #e6683c; }
+.link-icone-topo.topo-face:hover { color: #1877f2; }
+
+.navigation a {
+    color: #ffffff; 
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.navigation a:hover {
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   3. CLASSES DE CENTRALIZAÇÃO E DESIGN DOS CARDS (QUEM SOMOS / CONTATO)
+   ========================================================================= */
+.container-central {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    flex: 1 !important; 
+    padding: 40px 20px;
+}
+
+.caixa-destaque {
+    background: linear-gradient(135deg, #16161a, #0b0b0d);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;            
+    padding: 40px;             
+    border-radius: 20px;       
+    max-width: 550px;          
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.caixa-destaque h2 { font-size: 28px; margin-bottom: 15px; font-weight: 700; }
+.caixa-destaque p { color: #a0a0a0; line-height: 1.6; margin-bottom: 25px; font-size: 16px; }
+.caixa-destaque .linha-link { margin-bottom: 15px; color: #ffffff; font-size: 16px; }
+.caixa-destaque a { color: #0070f3; text-decoration: none; font-weight: 600; margin-left: 5px; }
+.caixa-destaque a:hover { text-decoration: underline; }
+
+.caixa-quemsomos {
+    background: linear-gradient(135deg, #16161a, #0b0b0d);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;            
+    padding: 45px;             
+    border-radius: 20px;       
+    max-width: 750px;          
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.caixa-quemsomos h2 { font-size: 32px; margin-bottom: 20px; font-weight: 700; color: #0070f3; }
+.caixa-quemsomos p { color: #a0a0a0; line-height: 1.7; margin-bottom: 20px; font-size: 16px; text-align: justify; }
+.caixa-quemsomos strong { color: #ffffff; }
+
+/* ==========================================================================
+   4. ESTRUTURA E GRADE DA PÁGINA DE SERVIÇOS
+   ========================================================================= */
+.servicos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    flex: 1 !important; /* Mola de segurança ativada para serviços */
+    width: 100%;
+}
+
+.introducao-bpo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.introducao-bpo h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.introducao-bpo h1 span {
+    color: #0070f3; 
+}
+
+.introducao-bpo p {
+    font-size: 18px;
+    color: #a0a0a0;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.introducao-bpo strong {
+    color: #ffffff;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+.card-servico {
+    background: linear-gradient(135deg, #16161a, #0b0b0d);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 112, 243, 0.4); 
+}
+
+.card-servico h3 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    color: #0070f3; 
+}
+
+.card-servico p {
+    font-size: 14px;
+    color: #a0a0a0; 
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. ESTILO DO RODAPÉ (FOOTER)
+   ========================================================================= */
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08); 
+    padding: 30px 5%;
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-top: auto !important; /* Força o rodapé a ir para o chão absoluto */
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-content p {
+    color: #66666c;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0; /* Limpa margens intrusas que desalinhavam o rodapé */
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

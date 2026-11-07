@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #000000, #121212);
+    min-height: 100vh; 
+    color: #ffffff;
+    font-family: 'Satoshi', sans-serif; 
+}
+
+/* Seu Cabeçalho Oficial Premium com Efeito Blur */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+    letter-spacing: -0.5px;
+}
+
+.navigation a {
+    color: #ffffff; 
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.navigation a:hover {
+    opacity: 0.6;
+}
+
+
+
+
+.servicos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+}
+
+
+.introducao-bpo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.introducao-bpo h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+
+.introducao-bpo h1 span {
+    color: #0070f3; 
+}
+
+.introducao-bpo p {
+    font-size: 18px;
+    color: #a0a0a0;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.introducao-bpo strong {
+    color: #ffffff;
+}
+
+
+
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+
+.card-servico {
+    background: linear-gradient(135deg, #16161a, #0b0b0d);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 112, 243, 0.4); 
+}
+
+
+.card-servico h3 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+
+.card-servico p {
+    font-size: 14px;
+    color: #88888c;
+    line-height: 1.6;
+}
